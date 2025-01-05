@@ -1,0 +1,166 @@
+' Excel Functions and Commands Revision Sheet
+
+This script provides a comprehensive collection of essential Excel functions and their practical examples, perfect for quick reference and revision. It covers a wide range of functions, including text manipulation, lookup, logical tests, mathematical operations, date handling, and error management. Whether you’re a beginner looking to understand the basics or an advanced user seeking a refresher, this guide is designed to help you efficiently use Excel in various data analysis and spreadsheet tasks.
+
+Key Functions Covered:
+
+Lookup functions like VLOOKUP, HLOOKUP, INDEX, and MATCH
+Mathematical functions such as SUM, AVERAGE, and COUNT
+Text functions including CONCATENATE, LEFT, RIGHT, and MID
+Date and time functions like TODAY, NOW, YEAR, MONTH, and DAY
+Logical functions including IF, AND, OR, and NOT
+Data manipulation functions like TEXT, LEN, TRIM, and ROUND
+Error handling with IFERROR
+Examples are provided for each function to demonstrate how they can be applied in real-world scenarios, helping you streamline your workflow, solve complex problems, and boost your Excel efficiency.
+
+Feel free to download and use this script as a quick reference or a learning tool for mastering Excel's powerful functionality.
+
+' 1. VLOOKUP
+' Syntax: =VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])
+' Example: Find the price of an item in a table
+=VLOOKUP(A2, B2:D10, 3, FALSE) ' Looks for the value in cell A2 in the range B2:D10 and returns the value in the 3rd column
+
+' 2. HLOOKUP
+' Syntax: =HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])
+' Example: Find the sales data for a specific month
+=HLOOKUP("January", B1:G10, 2, FALSE) ' Looks for "January" in row 1 and returns the value in the 2nd row
+
+' 3. INDEX
+' Syntax: =INDEX(array, row_num, [column_num])
+' Example: Return the value in the 2nd row, 3rd column from a table
+=INDEX(B2:D10, 2, 3) ' Returns the value from row 2, column 3
+
+' 4. MATCH
+' Syntax: =MATCH(lookup_value, lookup_array, [match_type])
+' Example: Find the position of "Item B" in the list
+=MATCH("Item B", A2:A10, 0) ' Returns the position of "Item B" in the range A2:A10
+
+' 5. IF
+' Syntax: =IF(logical_test, value_if_true, value_if_false)
+' Example: Check if a number is greater than 10
+=IF(A2 > 10, "Yes", "No") ' If the value in cell A2 is greater than 10, it returns "Yes", otherwise "No"
+
+' 6. SUM
+' Syntax: =SUM(number1, [number2], ...)
+' Example: Add up all the values in the range
+=SUM(A2:A10) ' Adds all the values from cell A2 to A10
+
+' 7. AVERAGE
+' Syntax: =AVERAGE(number1, [number2], ...)
+' Example: Find the average of the values in the range
+=AVERAGE(A2:A10) ' Calculates the average of the values in cells A2 to A10
+
+' 8. COUNT
+' Syntax: =COUNT(value1, [value2], ...)
+' Example: Count how many numbers are in the range
+=COUNT(A2:A10) ' Counts the number of numeric values in cells A2 to A10
+
+' 9. COUNTA
+' Syntax: =COUNTA(value1, [value2], ...)
+' Example: Count how many non-empty cells are in the range
+=COUNTA(A2:A10) ' Counts the number of non-empty cells in the range A2 to A10
+
+' 10. CONCATENATE (or CONCAT in newer versions)
+' Syntax: =CONCATENATE(text1, [text2], ...)
+' Example: Combine first name and last name into a full name
+=CONCATENATE(A2, " ", B2) ' Combines the values in cells A2 and B2 with a space in between
+
+' 11. TEXT
+' Syntax: =TEXT(value, format_text)
+' Example: Format a number as currency
+=TEXT(A2, "$0.00") ' Formats the value in cell A2 as currency
+
+' 12. LEFT
+' Syntax: =LEFT(text, [num_chars])
+' Example: Extract the first 3 characters of a text string
+=LEFT(A2, 3) ' Returns the first 3 characters from the text in cell A2
+
+' 13. RIGHT
+' Syntax: =RIGHT(text, [num_chars])
+' Example: Extract the last 3 characters of a text string
+=RIGHT(A2, 3) ' Returns the last 3 characters from the text in cell A2
+
+' 14. MID
+' Syntax: =MID(text, start_num, num_chars)
+' Example: Extract a substring from the middle of a text string
+=MID(A2, 2, 3) ' Returns 3 characters starting from the 2nd character of the text in cell A2
+
+' 15. LEN
+' Syntax: =LEN(text)
+' Example: Find the length of a text string
+=LEN(A2) ' Returns the number of characters in the text in cell A2
+
+' 16. TRIM
+' Syntax: =TRIM(text)
+' Example: Remove extra spaces from a text string
+=TRIM(A2) ' Removes any leading, trailing, and multiple spaces in the text in cell A2
+
+' 17. NOW
+' Syntax: =NOW()
+' Example: Get the current date and time
+=NOW() ' Returns the current date and time
+
+' 18. TODAY
+' Syntax: =TODAY()
+' Example: Get the current date
+=TODAY() ' Returns the current date
+
+' 19. YEAR
+' Syntax: =YEAR(date)
+' Example: Extract the year from a date
+=YEAR(A2) ' Extracts the year from the date in cell A2
+
+' 20. MONTH
+' Syntax: =MONTH(date)
+' Example: Extract the month from a date
+=MONTH(A2) ' Extracts the month from the date in cell A2
+
+' 21. DAY
+' Syntax: =DAY(date)
+' Example: Extract the day from a date
+=DAY(A2) ' Extracts the day from the date in cell A2
+
+' 22. IFERROR
+' Syntax: =IFERROR(value, value_if_error)
+' Example: Handle errors in a formula
+=IFERROR(A2/B2, "Error") ' If there's an error in the division, it returns "Error" instead
+
+' 23. ROUND
+' Syntax: =ROUND(number, num_digits)
+' Example: Round a number to 2 decimal places
+=ROUND(A2, 2) ' Rounds the value in cell A2 to 2 decimal places
+
+' 24. SUMIF
+' Syntax: =SUMIF(range, criteria, [sum_range])
+' Example: Sum the values where a condition is met
+=SUMIF(A2:A10, ">10", B2:B10) ' Sums the values in B2:B10 where the corresponding values in A2:A10 are greater than 10
+
+' 25. COUNTIF
+' Syntax: =COUNTIF(range, criteria)
+' Example: Count the number of cells that meet a condition
+=COUNTIF(A2:A10, ">10") ' Counts the number of cells in A2:A10 that are greater than 10
+
+' 26. AND
+' Syntax: =AND(logical1, [logical2], ...)
+' Example: Check if both conditions are true
+=AND(A2 > 10, B2 < 20) ' Returns TRUE if A2 > 10 and B2 < 20
+
+' 27. OR
+' Syntax: =OR(logical1, [logical2], ...)
+' Example: Check if at least one condition is true
+=OR(A2 > 10, B2 < 20) ' Returns TRUE if either A2 > 10 or B2 < 20
+
+' 28. NOT
+' Syntax: =NOT(logical)
+' Example: Reverse the logical value
+=NOT(A2 > 10) ' Returns TRUE if A2 is not greater than 10
+
+' 29. RANDBETWEEN
+' Syntax: =RANDBETWEEN(bottom, top)
+' Example: Generate a random number between 1 and 100
+=RANDBETWEEN(1, 100) ' Generates a random number between 1 and 100
+
+' 30. TRANSPOSE
+' Syntax: =TRANSPOSE(array)
+' Example: Convert a horizontal range to a vertical range
+=TRANSPOSE(A2:C2) ' Converts the horizontal range A2:C2 into a vertical range
